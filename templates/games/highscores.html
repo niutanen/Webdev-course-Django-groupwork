@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="container col-md-7 text-center">
+
+      {% for game in games %}
+    <h3>{{game.name}}</h3>
+    <table class="table table-striped text-center">
+      <thead>
+        <tr>
+          <th scope="col">Username</th>
+          <th scope="col">Highscore</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for score in game.highscores %}
+        <tr>
+          <td>{{score.name}}</td>
+          <td>{{score.score}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% endfor %}
+  </div>
+{% endblock %}

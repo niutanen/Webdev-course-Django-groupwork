@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{%load crispy_forms_tags%}
+{% block content %}
+
+<div class= "container">
+  <form action="{{url}}" method="POST">
+    <input type="hidden" name="game_url"
+          value="{{game}}" />
+    <input type="hidden" name="url" value="{{url}}" />
+    <input type="hidden" name="pid" value="{{pid}}" />
+    <input type="hidden" name="sid" value="{{sid}}" />
+    <input type="hidden" name="success_url"
+            value="{{success}}" />
+    <input type="hidden" name="cancel_url"
+            value="{{cancel}}" />
+    <input type="hidden" name="error_url"
+            value="{{error}}" />
+    <input type="hidden" name="checksum"
+            value="{{checksum}}" />
+    <div class="form-group">
+      <label for="id_amount">Amount</label>
+      <input type="text" name="amount" value="{{amount}}" readonly class="form-control" id="id_amount" aria-describedby="price">
+      <small id="emailHelp" class="form-text text-muted">Please check the price of the game and let us know if there is a problem</small>
+    </div>
+
+    <input type="submit" type="submit" value="Accept Payment" class="btn btn-primary">
+  </form>
+</div>
+{% endblock %}

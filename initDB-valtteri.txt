@@ -1,0 +1,31 @@
+python manage.py shell;
+import datetime;
+from gameshop.models import Games, Users, Gamestate, Payments;
+a = Users(name="user", email="user@user.com", username="user", password="user");
+a.save();
+b = Users(name="user1", email="user1@user.com", username="user1", password="user")
+b.save()
+c = Users(name="user2", email="use2r@user.com", username="user2", password="user")
+c.save()
+d = Users(name="user3", email="user3@user.com", username="user3", password="user")
+d.save()
+e = Users(name="user4", email="user4@user.com", username="user4", password="user")
+e.save()
+f = Users(name="user5", email="user5@user.com", username="user5", password="user")
+f.save()
+
+a = Games(link="https://play.famobi.com/smarty-bubbles", name="smarty bubble")
+a.save()
+a = Games(link="https://play.famobi.com/fruita-crush", name="fruita crush")
+a.save()
+a = Games(link="https://play.famobi.com/running-jack", name="running jack")
+a.save()
+a = Games(link="(http://webcourse.cs.hut.fi/example_game.html", name="backpack")
+a.save()
+
+a = Gamestate(uid=1, gameid=1)
+a.save()
+
+a = Payments(uid=1, gameid=1, price=5.00, date=datetime.datetime.now())
+a.save()
+

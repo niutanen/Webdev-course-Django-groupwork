@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+        <!-- Cards documentation: https://getbootstrap.com/docs/4.2/components/card/ -->
+        <div class="container">
+        <h3>
+          Page was not found. It was probably something you did. If this error persists, stop doing what you are doing
+          </h3>
+          <img src="http://www.ieyenews.com/wordpress/wp-content/uploads/2016/02/confused-monkey.jpg" alt="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTdvURn3uomWYSw9nMXJN7i9bSmqg8_hDFoJK3F_YCz93Ya9T_qg">
+        {{extras|safe}}  {# lets you add in html code #}
+      </div>
+
+{% endblock %}
